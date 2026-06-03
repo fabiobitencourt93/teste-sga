@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal - Bem Vindo!</title>
+    <img src="assets/logo2.png" width="200">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        body{
+        background-image: url('assets/opcao1.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="login">
+    <div class="bem-vindo">
+        <h2>Seja bem vindo ao Portal</h2>
+    </div>
+    <div class="acesso">
+        <p>Selecione seu peril para acessar o sistema.</p>
+    </div>
+    <div class="botoes">
+
+        <button type="button" class="adm" id="secretaria_btn">
+            <img src="assets/shield.png" class="shield">
+            <span style="color: white;">SECRETARIA</span>
+        </button>
+
+        <button type="button" class="coord" id="coord_btn">
+            <img src="assets/paper.png" class="paper">
+            <span style="color: white;">COORDENADOR</span>
+        </button>
+        
+        <button type="button" class="docente" id="docente_btn">
+            <img src="assets/teacher.png" class="doc">
+            <span style="color: white;">DOCENTE</span>
+        </button>
+
+    </div>
+    <div class="sn"><h3>INFORME SEU ID</h3></div>
+     <article class = "id">
+    
+        <input class="registro" 
+        id="registro_id"
+             placeholder="Digite seu número de registro" 
+                type="text"/>
+   <style>
+        /* Estilo do campo e do texto digitado */
+        .registro {
+            color: #ffffff; /* Texto digitado cinza escuro */
+            padding: 10px;
+            border: none;
+            width: 40vw;
+        
+        }
+
+        /* Estilo específico do placeholder */
+        .registro::placeholder {
+            color: #ffffff; /* Placeholder laranja */
+            opacity: 1;
+            border: none;
+            width: 40vw;
+        }
+     </style>
+
+     <div class="cracha"></div>
+
+    </article>
+
+<div class="senha2"><h3>SENHA</h3></div>
+    <article class = "codigo">
+    
+        <div class="block"></div>
+
+        <input class="senha" type="password" placeholder="********" id="senha_id">
+
+   <style>
+        /* Estilo do campo e do texto digitado */
+        .senha {
+            color: #ffffff; /* Texto digitado cinza escuro */
+            opacity: 1;
+            padding: 10px;
+            border: none;
+            width: 40vw;
+            order: 2;
+        
+        }
+
+        /* Estilo específico do placeholder */
+        .senha::placeholder {
+            color: #ffffff; /* Placeholder laranja */
+            opacity: 1;
+            border: none;
+            width: 40vw;
+            order: 2;
+        }
+     </style>
+
+     
+
+    </article>
+
+    <button type="button" class="entrar" id="entrar_btn">
+            <span style="color: white;">Acessar Portal</span>
+        </button>
+    </div>
+
+
+
+                
+
+    <script src="index.js"></script>
+
+
+    
+</script>
+</body>
+</html>
