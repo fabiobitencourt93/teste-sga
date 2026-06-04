@@ -2,22 +2,22 @@ const id = document.getElementById('registro_id')
 const senha = document.getElementById('senha_id')
 const botao = document.getElementById('entrar_btn')
 
-let tela_destino = "../tela_login/index.html"
+let tela_destino = "https://fabiobitencourt93.github.io/teste-sga/tela_login/index.html"
 
 const docente = document.getElementById('docente_btn')
     docente.addEventListener("click", ()=>{
-        tela_destino = "../tela_docente/docente.html"
+        tela_destino = "https://fabiobitencourt93.github.io/teste-sga/tela_docente/docente.html"
 
     })
 
     const coord = document.getElementById('coord_btn')
     coord.addEventListener("click", ()=>{
-        tela_destino = "../tela_coordenador/coordenador.html"
+        tela_destino = "https://fabiobitencourt93.github.io/teste-sga/tela_coordenador/coordenador.html"
     })
 
     const secretaria = document.getElementById('secretaria_btn')
     secretaria.addEventListener("click", ()=>{
-        tela_destino = "../tela_secretaria/secretaria.html"
+        tela_destino = "https://fabiobitencourt93.github.io/teste-sga/tela_secretaria/secretaria.html"
     })
 
 
@@ -26,7 +26,7 @@ function validaUsuario(){
         alert("Credenciais Inválidas, tente novamente.")
     }
     else{
-            if(tela_destino === "../tela_login/index.html"){
+            if(tela_destino === "https://fabiobitencourt93.github.io/teste-sga/tela_login/index.html"){
             alert("Selecione um perfil")
             return
         }
