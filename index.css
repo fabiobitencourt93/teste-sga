@@ -169,7 +169,7 @@ body{
 }
 
 .cracha{
-    background-image: url(assets/cracha.png);
+    background-image: url(cracha.png);
     background-size: cover;
     height: 11vh;
     width: 5vw;
@@ -208,7 +208,7 @@ body{
 }
 
 .block{
-    background-image: url(assets/senha.png);
+    background-image: url(senha.png);
     background-size: cover;
     height: 11vh;
     width: 5vw;
