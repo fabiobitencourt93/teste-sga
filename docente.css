@@ -168,7 +168,7 @@ body{
     border: none;
     outline: none;
     cursor: pointer;
-    background-image: url(assets/Docente.jpg);
+    background-image: url(Docente.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
