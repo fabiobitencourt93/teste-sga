@@ -1,281 +1,321 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-body{
-    font-family: "Manrope", sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
+
+body{
+    font-family:"Manrope",sans-serif;
+
+    background-image:url(opcao1.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+
+    min-height:100vh;
+}
+
+/* ===========================
+   LAYOUT GERAL
+=========================== */
+
+.container{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:40px 5%;
+}
+
+.logo-area{
+    flex:1;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.logo{
+    width:300px;
+    max-width:80%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.login{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+
+    max-width:600px;
+}
+
+/* ===========================
+   TÍTULOS
+=========================== */
 
 .bem-vindo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4vh;
-    color: #080076;
-    margin-top: -5vh;
-    position: relative;
-    top:10vh;
-}   
+    color:#080076;
+    margin-bottom:10px;
+}
+
+.bem-vindo h2{
+    font-size:3rem;
+}
 
 .acesso{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4vh;
-    color: #080076;
-    position: relative;
-    left: -5.3vw;
-    top:2vh;    
-    scale: 0.6;
-}   
-
-.adm{
-   height: 20vh;
-   width: 15vw;
-   line-height: -2px;
-   border-style: solid;
-   background-color: #080076;
-   border-radius: 40px;
-   justify-content: center;
-   align-items: center;
-   display: grid;
-   scale: 0.5;
-   border: none;
-   outline: none;
-   cursor: pointer;
-   font-size: 3vh;
-}   
-
-.shield1{
-   height: 10vh;
-   width: 30vw;
-   color: aliceblue;
-   position:relative;
-   left: 10vw;
-   top: 2vh; 
+    color:#080076;
+    margin-bottom:30px;
 }
 
-.shield{
-    height: 10vh;
-    width: 5vw;
-    color: white;
-    position:relative;
-    left: 3.5vh;
-    
+.acesso p{
+    font-size:1.2rem;
 }
 
-.coord{
-   height: 20vh;
-   width: 15vw;
-   line-height: -2px;
-   border-style: solid;
-   background-color: #080076;
-   border-radius: 40px;
-   justify-content: center;
-   align-items: center;
-   display: grid;
-   scale: 0.5;
-   border: none;
-   outline: none;
-   cursor: pointer;
-   font-size: 3vh;
-}   
-
-.paper1{
-   height: 10vh;
-   width: 30vw;
-   color: aliceblue;
-   position:relative;
-   left: 10vw;
-   top: 2vh; 
-}
-
-.paper{
-    height: 10vh;
-    width: 5vw;
-    color: white;
-    position:relative;
-    left: 6vh;
-
-}
+/* ===========================
+   BOTÕES PERFIL
+=========================== */
 
 .botoes{
-    justify-content: space-around;
-    align-items: center;
-    display: flex;
-    width:45.5vw;
-    position: relative;
-    top:-5vh;
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
 }
 
+.adm,
+.coord,
 .docente{
-   height: 20vh;
-   width: 15vw;
-   line-height: -2px;
-   border-style: solid;
-   background-color: #080060;
-   border-radius: 40px;
-   justify-content: center;
-   align-items: center;
-   display: grid;
-   scale: 0.5;
-   border: none;
-   outline: none;
-   cursor: pointer;
-   font-size: 3vh;
+    width:170px;
+    height:120px;
+
+    background:#080076;
+
+    border:none;
+    border-radius:25px;
+
+    cursor:pointer;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    transition:.3s;
 }
 
+.adm:hover,
+.coord:hover,
+.docente:hover{
+    transform:translateY(-4px);
+}
+
+.shield,
+.paper,
 .doc{
-    height: 10vh;
-    width: 5vw;
-    color: white;
-    position: relative;
-    left: 1vw;
+    width:50px;
+    height:50px;
+    margin-bottom:10px;
 }
 
+/* ===========================
+   LABELS
+=========================== */
 
-.sn{
-    position: relative;
-    scale: 0.7;
-    color: #080060;
-    top:-5vh
+.sn,
+.senha2{
+    color:#080060;
+    margin-bottom:8px;
 }
 
-.id{
-    height: 10vh;
-    width: 25vw;
-    background-color: rgba(0, 7, 61, 0.582);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    left: 5vw;
-    top: -7vh;
+.sn h3,
+.senha2 h3{
+    font-size:1rem;
 }
 
-.registro{
-    height: 5vh;
-    max-width:36vh;
-    border-style: none;
-    background-color: rgba(0, 7, 61, 0);
-    border-radius: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5vh;
-    font-style: italic;
-    order:2;
-    position: relative;
-    right: 2vh;
+/* ===========================
+   CAMPOS
+=========================== */
+
+.id,
+.codigo{
+    width:100%;
+    max-width:500px;
+
+    height:70px;
+
+    background:rgba(0,7,61,.58);
+
+    border-radius:18px;
+
+    display:flex;
+    align-items:center;
+
+    padding:0 20px;
+
+    margin-bottom:20px;
+}
+
+.cracha,
+.block{
+    width:40px;
+    height:40px;
+
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    flex-shrink:0;
 }
 
 .cracha{
-    background-image: url(cracha.png);
-    background-size: cover;
-    height: 11vh;
-    width: 5vw;
-    position: relative;
-    left: 1vw;
-    order: 1;
+    background-image:url(cracha.png);
 }
 
-.codigo{
-    height: 10vh;
-    width: 25vw;
-    background-color: rgba(0, 7, 61, 0.582);
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    left: 5vw;
-    top:-7vh;
-}
-
-.senha{
-    height: 5vh;
-    max-width: 36vh;
-    border-style: none;
-    background-color: transparent;
-    border-radius: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5vh;
-    font-style: italic;
-    order:2;
-    position: relative;
-    left: -1vw;
-}
 
 .block{
-    background-image: url(senha.png);
-    background-size: cover;
-    height: 11vh;
-    width: 5vw;
-    order: 1;
-    scale: 0.6;
+    background-image:url(senha.png);
 }
 
-.senha2{
-    position: relative;
-    scale: 0.7;
-    color: #080060;
-    top:-5vh
+.registro,
+.senha{
+    flex:1;
+
+    background:transparent;
+    border:none;
+    outline:none;
+
+    color:white;
+
+    font-size:1rem;
+    font-style: italic;
+
+    margin-left:15px;
 }
+
+.registro::placeholder,
+.senha::placeholder{
+    color:white;
+}
+
+/* ===========================
+   BOTÃO ENTRAR
+=========================== */
 
 .entrar{
-   height: 15vh;
-   width: 20vw;
-   line-height: -2px;
-   border-style: solid;
-   background-color: #080060;
-   border-radius: 40px;
-   justify-content: center;
-   align-items: center;
-   display: grid;
-   scale: 0.5;
-   border: none;
-   outline: none;
-   cursor: pointer;
-   font-size: 5vh;
-   position: relative;
-   left: 13vw;
+    width:100%;
+    max-width:300px;
 
+    height:70px;
+
+    background:#080060;
+
+    border:none;
+    border-radius:20px;
+
+    cursor:pointer;
+
+    font-size:1.3rem;
+
+    margin-top:15px;
 }
 
-
-.login{
-    max-width: 70%;
-    position:absolute;
-    left: 52.5%;
-    top:0vh
-    
+.entrar span{
+    color:white;
 }
 
-.perfil {
-    background: #1d1b8f;
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
+/* ===========================
+   PERFIL SELECIONADO
+=========================== */
+
+.perfil-ativo{
+    background-color:#54beff65 !important;
+    border:3px solid rgb(0,21,255);
+    box-shadow:0 0 20px rgba(0,229,255,.8);
 }
 
-.perfil.ativo {
-    background: #00bfff;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,191,255,.5);
+/* ===========================
+   TABLET
+=========================== */
+
+@media (max-width:1024px){
+
+    .container{
+        gap:30px;
+    }
+
+    .bem-vindo h2{
+        font-size:2.3rem;
+    }
 }
 
-.adm, .coord, .docente {
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
+/* ===========================
+   MOBILE
+=========================== */
 
-/* Perfil selecionado */
-.perfil-ativo {
-    background-color: #54beff65 !important;
-    border: 3px solid rgb(0, 21, 255);
-    transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.8);
+@media (max-width:768px){
+
+    body{
+        background-image: url(mobile.png);
+        }
+
+
+    .container{
+        flex-direction:column;
+
+        justify-content:center;
+        align-items:center;
+
+        text-align:center;
+    }
+
+        .logo{
+        position:static;
+        width:220px;
+        max-width:70%;
+    }
+
+    .logo-area{
+        margin-bottom:30px;
+    }
+
+    .login{
+        align-items:center;
+    }
+
+    .botoes{
+        justify-content:center;
+    }
+
+    .bem-vindo h2{
+        font-size:2rem;
+    }
+
+    .acesso p{
+        font-size:1rem;
+    }
+
+    .adm,
+    .coord,
+    .docente{
+        width:140px;
+        height:110px;
+    }
+
+    .id,
+    .codigo{
+        max-width:100%;
+    }
+
+    .entrar{
+        max-width:100%;
+    }
 }

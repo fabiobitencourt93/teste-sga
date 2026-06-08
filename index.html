@@ -4,21 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal - Bem Vindo!</title>
-    <img src="logo2.png" width="200">
     <link rel="stylesheet" href="index.css">
-    <style>
-        body{
-        background-image: url(opcao1.png);
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        }
-    </style>
+
 </head>
 
 <body>
-    
+
+    <div class="container">
+
+        <div class="logo-area">
+            <img src="logo2.png" class="logo">
+        </div>
+
     <div class="login">
     <div class="bem-vindo">
         <h2>Seja bem vindo ao Portal</h2>
@@ -47,30 +44,12 @@
     <div class="sn"><h3>INFORME SEU ID</h3></div>
      <article class = "id">
     
+     <div class="cracha"></div>
         <input class="registro" 
         id="registro_id"
              placeholder="Digite seu número de registro" 
                 type="text"/>
-   <style>
-        /* Estilo do campo e do texto digitado */
-        .registro {
-            color: #ffffff; /* Texto digitado */
-            padding: 10px;
-            border: none;
-            width: 40vw;
-        
-        }
 
-        /* Estilo específico do placeholder */
-        .registro::placeholder {
-            color: #ffffff; /* Placeholder */
-            opacity: 1;
-            border: none;
-            width: 40vw;
-        }
-     </style>
-
-     <div class="cracha"></div>
 
     </article>
 
@@ -118,8 +97,9 @@
 
     <script src="index.js"></script>
 
+        </div>
 
-    
-</script>
+    </div>
+
 </body>
 </html>
