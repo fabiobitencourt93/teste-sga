@@ -23,5 +23,5 @@ setInterval(atualizarRelogio, 1000);
 
 
 document.getElementById("logout").addEventListener("click", function () {
-    window.location.href = "https://fabiobitencourt93.github.io/teste-sga/";
+    window.location.href = "https://fabiobitencourt93.github.io/Web_SGA/";
 });
