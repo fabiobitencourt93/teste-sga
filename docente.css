@@ -301,7 +301,7 @@ body{
 
     border-radius:20px;
 
-    font-size:2rem;
+    font-size: 1.5rem;
     font-weight:700;
 
     color:black;
@@ -311,8 +311,10 @@ body{
 
 .dias{
     display:flex;
-    gap: 15px;
-
+    
+        
+    gap:-10px;
+    
     overflow-x:auto;
 
     padding-bottom:15px;
@@ -324,10 +326,14 @@ body{
     background:#dfe7f4;
 
     border-radius:20px;
+    
+    margin-right: -11px;
 
     overflow:hidden;
 
     flex-shrink:0;
+
+    scale: 0.9;
 
 }
 
@@ -336,7 +342,7 @@ body{
 
     color:#080060;
 
-    font-size:2rem;
+    font-size:1.5rem;
     font-weight:700;
 
     text-align:center;
@@ -345,7 +351,7 @@ body{
 }
 
 .dia-conteudo{
-    padding:20px;
+    padding:10px;
 }
 
 .dia-conteudo p{
