@@ -1,493 +1,491 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-body{
-    font-family: "Manrope", sans-serif;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+body{
+    font-family:"Manrope",sans-serif;
+    background-image:url(coordenacao.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    min-height:100vh;
+}
+
+/* ==========================
+   LAYOUT
+========================== */
+
+body{
+    display:flex;
+}
+
+/* ==========================
+   MENU LATERAL
+========================== */
 
 .coluna_menu{
-    height: 130vh;
-    width: 20vw;
-    background-color: rgba(171, 206, 250, 0.788);
-    position: absolute;
-    top: 0vh;
-    left: 0vw;
-    position: fixed;
-    backdrop-filter: blur(5px);
-}
+    width:280px;
+    min-width:280px;
 
-.pesquisa{
-    height: 10vh;
-    width: 80vw;
-    background-color: rgba(171, 206, 250, 0.788);
-    margin: -2vh;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0vh;
-    left: 20.9vw;
-    position: fixed;
-    backdrop-filter: blur(5px);
+    background:rgba(171,206,250,.78);
+    backdrop-filter:blur(5px);
+
+    display:flex;
+    flex-direction:column;
+
+    padding:25px 15px;
+
+    position:sticky;
+    top:0;
+
+    height:100vh;
 }
 
 .perfil{
-    position: relative;
-    top:2vh;
-    left: 2vw;
-    color: #080076;
+    color:#080076;
 }
 
-.ambientes{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color: #080076;
-    padding-left: 2vh;
-    font-weight: 500;
-    background-color: #08007615;
-    height: 5vh;
-    width: 16vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 1.5vw;
-    top:10vh;
-    border-radius: 2vh;
-    font-size: 2vh;
-    letter-spacing: 1px;
-    gap:1vh
-    
+.perfil h3{
+    font-size:1.8rem;
 }
 
-.horario{
-    border: none;
-    outline: none;
-    cursor: pointer;
+.perfil p{
+    font-size:.85rem;
+}
+
+.menu{
+    margin-top: 30px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* ==========================
+   BOTÕES MENU
+========================== */
+
+.menu-item,
+.logout{
+    border:none;
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 16px;
+
+    border-radius:15px;
+
+    background:#08007615;
+    color:#080076;
+
+    font-size:1rem;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.menu-item:hover,
+.logout:hover{
+    background:#08007630;
+}
+
+.menu-item.active{
+    background:#080076;
     color:white;
-    padding-left: 2vh;
-    font-weight: 500;
-    background-color: #080076;
-    height: 5vh;
-    width: 16vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 1.5vw;
-    top:15vh;
-    border-radius: 2vh;
-    font-size: 2vh;
-    letter-spacing: 1px;
-    gap:1vh
-}
-
-.portal{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color:#080076;
-    padding-left: 2vh;
-    font-weight: 500;
-    background-color: #08007615;
-    height: 5vh;
-    width: 16vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 1.5vw;
-    top:20vh;
-    border-radius: 2vh;
-    font-size: 2vh;
-    letter-spacing: 1px;
-    gap:1vh
-}
-
-.salas{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color:#080076;
-    padding-left: 2vh;
-    font-weight: 500;
-    background-color: #08007615;
-    height: 5vh;
-    width: 16vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 1.5vw;
-    top:25vh;
-    border-radius: 2vh;
-    font-size: 2vh;
-    letter-spacing: 1px;
-    gap:1vh
-}
-
-.relatorios{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color:#080076;
-    padding-left: 2vh;
-    font-weight: 500;
-    background-color: #08007615;
-    height: 5vh;
-    width: 16vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 1.5vw;
-    top:30vh;
-    border-radius: 2vh;
-    font-size: 2vh;
-    letter-spacing: 1px;
-    gap:1vh
 }
 
 .logout{
-    border: none;
-    outline: none;
-    cursor: pointer;
-    color:#080076;
-    padding-left: 2vh;
-    font-weight: 500;
-    background-color: #08007615;
-    height: 8vh;
-    width: 8vw;
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 1.5vw;
-    top:50vh;
-    border-radius: 2vh;
-    font-size: 2vh;
-    letter-spacing: 1px;
-    gap:1vh
+    margin-top:auto;
 }
 
-.avatar{
+/* ==========================
+   CONTEÚDO
+========================== */
+
+.conteudo{
+    flex:1;
+    margin-left:5px;
+    padding:20px;
+}
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 18.2vw; /* largura do menu lateral */
+    width: 82vw;
+
+    height: 80px;
+
+    background:rgba(171,206,250,.78);
+    backdrop-filter:blur(5px);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 1vw;
+
+    padding-right: 1.5vw;
+
+    z-index: 999;
+}
+
+.indicadores{
+    top: 40vh;
+}
+/* =========================
+   CAMPO DE BUSCA
+========================= */
+
+.campo-busca{
+    width: 320px;
+    min-width: 250px;
+
+    height: 45px;
+
     border: none;
     outline: none;
+
+    border-radius: 30px;
+
+    background: #ffffff;
+    border:1px solid #ccc;
+
+    padding-left: 1vw;
+
+    font-size: 1rem;
+
+    color: #555;
+}
+
+.campo-busca::placeholder{
+    color: #666;
+}
+
+/* =========================
+   BOTÕES DOS ÍCONES
+========================= */
+
+.icone-btn{
+    width: 24px;
+    height: 24px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     cursor: pointer;
-    background-image: url(Docente.jpg);
-    background-position: center;
+}
+
+.icone-btn svg{
+    width: 26px;
+    height: 26px;
+}
+
+/* =========================
+   AVATAR
+========================= */
+
+.avatar-btn{
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    margin-right: 4px;
+    border-radius: 50%;
+
+    background-image: url("Docente.jpg");
     background-size: cover;
-    position: relative;
-    display: flex;
-    top: 1vh;
-    left: 76vw;
-    height: 6vh;
-    width: 6vh;
-    border-radius: 3vw;
-}
+    background-position: center;
 
-.pesquisar{
-    height: 5vh;
-    max-width:36vh;
-    padding-left: 1vh;
-    border-color: gray;
-    border-style: solid;
-    background-color: rgb(255, 255, 255);
-    border-radius: 3vh;
-    display: flex;
-    align-items: center;
-    font-size: 2.5vh;
-    font-style: italic;
-    order:2;
-    position: relative;
-    top:1vh;
-    left: 47vw;
-}
-
- .settings{
-    background-color: transparent;
-    border: none;
-    outline: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-size: 2.5vh;
-    font-style: italic;
-    order:2;
-    position: relative;
-    top:1vh;
-    left:66.5vw;
 }
 
-.notifications{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    font-size: 2.5vh;
-    font-style: italic;
-    order:2;
-    position: relative;
-    top:1vh;
-    left:67vw; 
-}
+/* ==========================
+   ALERTAS
+========================== */
 
 .alerta{
-    background-color: #28236688;
-    border-radius: 4vh;
-    position: relative;
-    top: 9.3vh;
-    left: 20.5vw;
-    height: 25vh;
-    width: 77vw;
+    background:#28236688;
+    border-radius:20px;
+
+    padding:25px;
+    
+
+    color:white;
+
+    margin-bottom:20px;
+    
+    margin-top: 10vh;
 }
 
 .alerta-titulo{
-    color: white;
-    background-color: #080060;
-    border-radius: 3vh;
-    position: relative;
-    font-size: xx-large;
-    font-style: italic;
-    padding-left: 1vw;
-    top: 3vh;
-    left: 1vw;
-    height: 8vh;
-    width: 11.5vw;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    display:inline-flex;
+
+    background:#080060;
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:15px;
+
+    font-size:1.4rem;
+    font-weight:bold;
 }
 
 .alerta-texto{
-    color: white;
-    background-color: transparent;
-    border-radius: 3vh;
-    position: relative;
-    font-size: larger;
-    font-style: italic;
-    line-height: 6vh;
-    top: 7vh;
-    left: 5vw;
-    height: 5vh;
-    width: fit-content;
-    display: flex;
-    justify-content: start;
-    align-items: center;
+    line-height:1.8;
+    margin-top: 20px
 }
 
+/* ==========================
+   TÍTULO
+========================== */
 
-.indicadores{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    height: auto;
-    width: 76.8vw;
-    position: absolute;
-    top:38vh;
-    left: 21vw;
+.topo{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin-bottom:20px;
 }
 
-.topo {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: absolute;
-    height: 20vh;
-    width: 71.7vw;
-    top: 2vh;
-    left: 1vw;
-    padding-left:3vw ;
-    background: white;
-    border-radius: 1vh;
-}
-
-/* RESUMO */
-.resumo{
-    position: absolute;
-    display: flex;
-    justify-content: space-around;
-    top:24vh;
-    width:74.7vw;
-    left: 2.2vh;
-    gap:2vw;
-    display: flex;
-    
-}
-
-.card{
-    flex: 1;
-    display: flex;
-    background: white;
-    padding: 2vh;
-    gap: 1vw;
-    border-radius: 1vh;
-}
-
-.card span{
-    font-size: 1.5vh;
-}
-
-.card strong{
-    font-size: 4vh;
-}
-
-/* STATUS BARRA */
-.card.ocupado{ border-left: 0.5vw solid #ff4d4d; }
-.card.livre{ border-left: 0.5vw solid #00c853; }
-.card.manutencao{ border-left: 0.5vw solid #ff9800; }
-
-.tabela-corpo{
-    position: absolute;
-    top:32.5vh;
-    left: 1vw;
-    width: auto;
-    height: auto;
-}
-
-/* TABELA */
-.tabela{
-    padding: 2vh;
-    width: 74.6vw;
-    margin: 3vh auto;
-    border-collapse: collapse;
-    background: rgb(255, 255, 255);
-    border-radius: 1vh;
-    overflow: hidden;
-}
-
-.tabela thead{
-    background: #080060;
-}
-
-.tabela th{
-    padding: 1.5vh 1vw;
-    color: white;
-    font-size: 2.2vh; /* maior para TV */
-    text-align: left;
-}
-
-.tabela td{
-    padding: 1.5vh 1vw;
-    font-size: 2.5vh; /* leitura à distância */
-}
-
-/* destaque sala */
-.tabela td:first-child{
-    font-size: 3vh;
-    font-weight: bold;
-}
-
-/* STATUS */
-td.ocupado{
-    color: #ff4d4d;
-    font-weight: bold;
-}
-
-td.livre{
-    color: #00c853;
-    font-weight: bold;
-}
-
-td.manutencao{
-    color: #ff9800;
-    font-weight: bold;
+.topo h1{
+    color:black;
 }
 
 .relogio-container{
-    background-color: #ffffff;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    height: 5vh;
-    width: 10vw;
-    border-radius: 10px;
-    border-style: double;
-    position: absolute;
-    top:4vh;
-    left: 61vw;
+    display:flex;
+    gap:15px;
+
+    border:2px solid black;
+
+    padding:10px 20px;
+
+    border-radius:10px;
 }
 
-
-
-.container{
-    position: relative;
-    top: 25vh;
-    left: 1vw;
-    width: 80vw;
+/* ==========================
+   TABELA HORÁRIOS
+========================== */
+.container-horarios{
+    
+    margin-top:20px;
+    
 }
 
-.titulo{
-    background-color: white;
-    position: relative;
-    border-radius: 2vh;
-    height: 10vh;
-    width: 74.5vw;
-    font-size: xx-large;
+.titulo-turma{
+    background:white;
+    padding:25px;
+
+    border-radius:20px;
+
+    font-size:2rem;
+    font-weight:700;
+
+    color:black;
+
+    margin-bottom:20px;
 }
 
+.dias{
+    display:flex;
+    gap: 15px;
 
+    overflow-x:auto;
 
-.segunda{
-    background-color: white;
-    border-radius: 5px;
-    background-color: rgba(170, 205, 250, 0.280);
+    padding-bottom:15px;
+}
+
+.dia-card{
+    
+
+    background:#dfe7f4;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+}
+
+.dia-titulo{
+    background:#a9c0e6;
+
     color:#080060;
-    border-radius: 15px;
-    width: 50vw;
-    display: grid;
-    justify-content: center;
-    width: auto;
-    scale:0.9;
+
+    font-size:2rem;
+    font-weight:700;
+
+    text-align:center;
+
+    padding:18px;
 }
 
-.terca{
-    background-color: white;
-    display: grid;
-    color: #080060;
-    border-radius: 15px;
-    background-color: rgba(170, 205, 250, 0.280);
-    justify-content: center;
-    width: auto;
-    scale:0.9;
+.dia-conteudo{
+    padding:20px;
 }
 
-.quarta{
-    background-color: white;
-    color: #080060;
-    border-radius: 15px;
-    display: grid;
-    background-color: rgba(170, 205, 250, 0.280);
-    justify-content: center;
-    width: auto;
-    scale:0.9;
+.dia-conteudo p{
+    color:#303080;
+
+    font-size:1.3rem;
+
+    margin-bottom:20px;
+}
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width:1024px){
+
+    .coluna_menu{
+        width:230px;
+    }
+
+    .conteudo{
+        margin-left:230px;
+    }
+
 }
 
-.quinta{
-    background-color: white;
-    display: grid;
-    color: #080060;
-    border-radius: 15px;
-    background-color: rgba(170, 205, 250, 0.280);
-    justify-content: center;
-    width: auto;
-    scale:0.9;
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width:768px){
+
+    body{
+        display:block;
+    }
+
+    .coluna_menu{
+         order:2;
+        margin-top: 119px;
+        width:100%;
+        min-width:100%;
+        height:auto;
+
+        position:relative;
+    }
+
+    .conteudo{
+        margin-left:0;
+        padding:15px;
+    }
+
+    /* PESQUISA ACIMA DO MENU */
+
+    .pesquisa{
+        flex-wrap:wrap;
+        order:-1;
+    }
+
+    .pesquisar{
+        width:100%;
+        flex:none;
+    }
+
+    .menu{
+        width:100%;
+    }
+
+    .menu-item{
+        width:100%;
+        justify-content:flex-start;
+    }
+
+    .topo{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .relogio-container{
+        width:100%;
+        justify-content:center;
+    }
+
+    .alerta-texto{
+        font-size:.9rem;
+        line-height:1.6;
+    }
 }
 
-.sexta{
-    background-color: white;
-    display: grid;
-    background-color: rgba(170, 205, 250, 0.280);
-    color: #080060;
-    border-radius: 15px;
-    justify-content: center;
-    width: auto;
-    scale:0.9;
+/* ==========================
+   CELULAR PEQUENO
+========================== */
+
+@media (max-width:480px){
+
+    .perfil h3{
+        font-size:1.3rem;
+    }
+
+    .menu-item{
+        font-size:.9rem;
+    }
+
+    .alerta-titulo{
+        font-size:1.1rem;
+    }
+
+    .topo h1{
+        font-size:1.3rem;
+    }
+
+    .pesquisar{
+        font-size:.9rem;
+    }
 }
 
-.tabela{
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    width: auto;
-}
 
+@media (max-width: 768px){
+
+    .topbar{
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        height: auto;
+
+        padding: 10px;
+    }
+
+    .campo-busca{
+        width: 90%;
+        min-width: unset;
+    }
+
+    .avatar-btn{
+        width: 50px;
+        height: 50px;
+    }
+
+    .logout{
+        margin-top: 18px;
+    }
+}
